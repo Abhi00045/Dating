@@ -8,13 +8,13 @@ import MainHome from './pages/MainHome.jsx'
 const router =createBrowserRouter([
 
   {
-    element:<App/>,
-    children:[
-      {
+    // element:<App/>,
+    // children:[
+    //   {
         path:'/',
         element:<MainHome/>
-      }
-    ]
+    //   }
+    // ]
   }
 ])
 

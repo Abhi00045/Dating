@@ -36,5 +36,6 @@ export default function App() {
         <img src={arrow} ref={cursor} className="w-13 fixed" alt="" />
         {/* <div ref={cursor} className="w-10 h-10 fixed bg-black rounded-xl"></div> */}
     </div>
+    
   );
 }

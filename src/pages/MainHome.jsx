@@ -1,8 +1,9 @@
+
 const MainHome = ()=>{
 
     return(
         <>
-        <div>hiii</div>
+        <h1 className="text-5xl">Break the Ice Tonight</h1>
         </>
     )
 }
