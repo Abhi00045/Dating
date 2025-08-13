@@ -3,3 +3,50 @@
 /* #mainRef{
   background-color: #f6f0e2;
 } */
+body{
+  overflow-x: hidden; /*its not working asshole*/
+}
+
+ #navBar{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  #menu{
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+ }
+ #fullmenu{
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  background-color: rgba(55, 55, 55, 0.392);
+  top: 0;
+  right: -40%; /*width entha pedthe right negative antha pedthe sakkaga iythadhi adhi*/
+  backdrop-filter: blur(10px);
+  padding: 150px 50px;
+  h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-family: 'Abril Fatface';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  cursor: pointer;
+  }
+  h1:hover{
+    color: black;
+    cursor: pointer;
+  }
+  #close{
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    color: white;
+    cursor: pointer;
+  }
+ }
