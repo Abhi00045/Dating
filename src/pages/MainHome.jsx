@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import { Navbar } from "../components/navBar";
+import DatingShowHero from "../components/hero";
 
 const MainHome = ()=>{
 
@@ -8,6 +9,7 @@ const MainHome = ()=>{
         <>
         <div id="bodymain">
             <Navbar/>
+            <DatingShowHero/>
             {/* <Outlet/> */}
         </div>
         </>
