@@ -1,6 +1,4 @@
-import { Outlet } from "react-router";
-import { Navbar } from "../components/navBar";
-import DatingShowHero from "../components/hero";
+import HeroSection from "../components/HeroSection";
 
 const MainHome = ()=>{
 
@@ -8,9 +6,7 @@ const MainHome = ()=>{
     return(
         <>
         <div id="bodymain">
-            <Navbar/>
-            <DatingShowHero/>
-            {/* <Outlet/> */}
+            <HeroSection/>
         </div>
         </>
     )
