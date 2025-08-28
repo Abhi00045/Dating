@@ -1,43 +1,63 @@
 import React from "react";
 import Man from "../Styles/hero-men.png";
 import Woman from "../Styles/hero-woman.png";
-
-// Import Google Font in index.html:
-// <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+import gsap from "gsap";
+import { useEffect , useRef } from "react";
 
 const HeroSection = () => {
+
+  const manRef  = useRef(null);
+  const womanRef = useRef(null);
+
+  useEffect(()=>{
+
+    const tl = gsap.timeline();
+
+    tl.from(manRef.current, {
+      x:0,
+      duration:1.2 ,
+      ease:"power3.out"
+        })
+
+     tl.from(womanRef.current, {
+      x:0,
+      duration:1.2 ,
+      ease:"power3.out"
+        })    
+  },[])
+
   return (
-    <section className="w-full h-screen flex ">
-      
-      {/* Left Man */}
-      <img
-      id="Image-man"
-        src={Man}
-        alt="Blindfolded Man"
-        className="absolute bottom-0 max-h-[600px] object-contain"
-      />
+    <>
+      <style>{`
+        #section_love {
+          /* border: 2px solid black; */
+        height: 100vh;
+        width: 100%;
+        }
+        #image {
+          width: 900px;
+        }
+        #image1 {
+          width: 900px;
+        }
+        #image-desc {
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          gap:10px;
+          align-items: end;
+        }
+      `}</style>
 
-
-
-      {/* Center Content */}
-      <div className="text-center">
-        <h1
-          className="text-5xl lg:text-6xl font-extrabold text-black leading-tight"
-          style={{ fontFamily: "'Fredoka One', cursive" }}
-        >
-          Your Move,<br />Your Moment
-        </h1>
-
+      <div id="section_love">
+        <h1 id="hero-text" >
+         Your Move,<br />Your Movement         </h1>
+        <div id="image-desc">
+          <img id="image" src={Man} alt="man" ref={manRef} />
+          <img id="image1" src={Woman} alt="woman" ref={womanRef} />
+        </div>
       </div>
-
-{/* Right Woman */}
-      <img
-      id="Image-woman"
-        src={Woman}
-        alt="Blindfolded Woman"
-        className="absolute  bottom-0 max-h-[600px] "
-      />
-    </section>
+    </>
   );
 };
 
