@@ -35,13 +35,13 @@ const HeroSection = () => {
         width: 100%;
         }
         #image {
-          width: 900px;
+          width: 800px;
         }
         #image1 {
-          width: 900px;
+          width: 800px;
         }
         #image-desc {
-          position: absolute;
+        position: absolute;  
           display: flex;
           flex-direction: row;
           gap:10px;
@@ -51,7 +51,8 @@ const HeroSection = () => {
 
       <div id="section_love">
         <h1 id="hero-text" >
-         Your Move,<br />Your Movement         </h1>
+         Your Move,<br />Your Movement</h1>
+         
         <div id="image-desc">
           <img id="image" src={Man} alt="man" ref={manRef} />
           <img id="image1" src={Woman} alt="woman" ref={womanRef} />
